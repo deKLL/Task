@@ -1,0 +1,21 @@
+#include <iostream>
+#include "mystringlib.h"
+
+using namespace std;
+
+int main() {
+    const char *str = "Hello, world!";
+    int length = mystrlen(str);
+    cout << "Length: " << length << endl;
+
+    char buffer[20];
+    mystrcpy(buffer, str);
+    cout << "Copy: " << buffer << endl;
+
+    char str1[20] = "Hello";
+    const char *str2 = "world!";
+    mystrcat(str1, str2);
+    cout << "Concatenation: " << str1 << endl;
+
+    return 0;
+}
